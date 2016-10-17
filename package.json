@@ -1,0 +1,24 @@
+{
+
+	"name": "mytest",
+	"version": "6.1.29",
+	"description": "mytest hh",
+	"keywords": [
+		"mytest"],
+	"homepage": "http://www.google.com",
+	"author": "neil",
+	"main": "mytest.js",
+	"scripts": {
+		"install": "node ./build.js"
+	},
+	"engines": {
+		"node": ">=0.5.2"
+	},
+	"bugs": {
+		"email" : "a@x.com"
+	},
+	"licenses" : [
+	  { "type" : "PROPRIETARY"
+	  }
+	]
+}

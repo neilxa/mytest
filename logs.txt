@@ -1,0 +1,52 @@
+KAs-MacBook-Pro:setup neil$ node -v
+v4.6.0
+KAs-MacBook-Pro:setup neil$ npm install mytest/
+
+> mytest@6.1.29 install /Users/neil/Desktop/setup/node_modules/mytest
+> node ./build.js
+
+  CXX(target) Release/obj.target/mytest/src/mytest.o
+In file included from ../src/mytest.cc:4:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/resolv.h:343:47: error:
+      unknown type name 'ns_tsig_key'
+int             res_sendsigned __P((const u_char *, int, ns_tsig_key *,
+                                                         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/resolv.h:473:59: error:
+      unknown type name 'ns_tsig_key'
+int             res_nsendsigned __P((res_state, const u_char *, int, ns_tsig_key *, u_char *, int));
+                                                                     ^
+2 errors generated.
+make: *** [Release/obj.target/mytest/src/mytest.o] Error 1
+gyp ERR! build error
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/Users/neil/.nvm/versions/node/v4.6.0/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:270:23)
+gyp ERR! stack     at emitTwo (events.js:87:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:172:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:200:12)
+gyp ERR! System Darwin 16.0.0
+gyp ERR! command "/Users/neil/.nvm/versions/node/v4.6.0/bin/node" "/Users/neil/.nvm/versions/node/v4.6.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+gyp ERR! cwd /Users/neil/Desktop/setup/node_modules/mytest
+gyp ERR! node -v v4.6.0
+gyp ERR! node-gyp -v v3.0.1
+gyp ERR! not ok
+Build failed
+npm ERR! Darwin 16.0.0
+npm ERR! argv "/Users/neil/.nvm/versions/node/v4.6.0/bin/node" "/Users/neil/.nvm/versions/node/v4.6.0/bin/npm" "install" "mytest/"
+npm ERR! node v4.6.0
+npm ERR! npm  v2.14.4
+npm ERR! code ELIFECYCLE
+
+npm ERR! mytest@6.1.29 install: `node ./build.js`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the mytest@6.1.29 install script 'node ./build.js'.
+npm ERR! This is most likely a problem with the mytest package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node ./build.js
+npm ERR! You can get their info via:
+npm ERR!     npm owner ls mytest
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/neil/Desktop/setup/npm-debug.log
